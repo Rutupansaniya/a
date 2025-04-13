@@ -85,6 +85,8 @@ with st.sidebar:
     """
     Your Code Here
     """
+# Define the submit button for the input parameters.
+submit = st.button("Predict Wait Time")
 
 
 # Define the submit button for the input parameters.
@@ -124,7 +126,7 @@ with st.container():
     """
     Your Code Here
     """
-
+ df = pd.DataFrame(data)
     # Display the sample dataset in the Streamlit app.
     st.header("Sample Dataset")
     st.write(df)
