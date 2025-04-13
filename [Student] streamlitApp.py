@@ -29,6 +29,13 @@ Your Code Here
 
 # Caching the model for faster loading
 @st.cache_resource
+def load_model():
+    with open(modelfile, "rb") as file:
+        model = pickle.load(file)
+    return model
+
+# Load the model into a variable
+voting_model = load_model()
 
 
 # Define the function for the wait time predictor using the loaded model. This function takes in the input parameters and returns a predicted wait time in days.
