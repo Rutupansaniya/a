@@ -126,7 +126,7 @@ with st.container():
     """
     Your Code Here
     """
- df = pd.DataFrame(data)
+    df = pd.DataFrame(data)
     # Display the sample dataset in the Streamlit app.
     st.header("Sample Dataset")
     st.write(df)
