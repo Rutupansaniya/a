@@ -35,7 +35,7 @@ Your Code Here
    # return model
 def load_model():
     # Get the correct path for Streamlit Cloud
-    model_path = os.path.join(os.path.dirname(__file__), 'models/weather_model.pkl')
+    model_path = os.path.join(os.path.dirname(__file__), './voting_model.pkl')
     with open(model_path, 'rb') as f:
         return pickle.load(f)
 
