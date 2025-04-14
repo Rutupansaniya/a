@@ -29,13 +29,20 @@ Your Code Here
 
 # Caching the model for faster loading
 @st.cache_resource
+#def load_model():
+ #   with open(modelfile, "rb") as file:
+  #      model = pickle.load(file)
+   # return model
 def load_model():
-    with open(modelfile, "rb") as file:
-        model = pickle.load(file)
-    return model
+    # Get the correct path for Streamlit Cloud
+    model_path = os.path.join(os.path.dirname(__file__), 'models/weather_model.pkl')
+    with open(model_path, 'rb') as f:
+        return pickle.load(f)
 
+model_data = load_model()
+model = model_data['model']
 # Load the model into a variable
-voting_model = load_model()
+#voting_model = load_model()
 
 
 # Define the function for the wait time predictor using the loaded model. This function takes in the input parameters and returns a predicted wait time in days.
