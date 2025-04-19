@@ -5,6 +5,9 @@ import numpy as np
 import os
 from PIL import Image
 import pandas as pd
+import joblib
+model = joblib.load('voting_model.pkl')
+
 
 # Set Streamlit page configuration
 st.set_page_config(
